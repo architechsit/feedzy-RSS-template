@@ -5,15 +5,15 @@
 ?>
 <style>
 	
-.feedzy-tos-template .rss_header h2 {
+.feedzy-custom-template .rss_header h2 {
 	display: none !important;
 }
 	
-.feedzy-tos-template {
-    --tos-purple: #63256f;
-    --tos-blue: #294cff;
-    --tos-border: #d9d9d9;
-    --tos-text: #555;
+.feedzy-custom-template {
+    --custom-purple: #63256f;
+    --custom-blue: #294cff;
+    --custom-border: #d9d9d9;
+    --custom-text: #555;
 
     width: 100%;
     max-width: 100%;
@@ -21,30 +21,30 @@
 }
 
 /* Header */
-.feedzy-tos-template .rss_header {
+.feedzy-custom-template .rss_header {
     margin-bottom: 30px;
 }
 
-.feedzy-tos-template .rss_header h2 {
+.feedzy-custom-template .rss_header h2 {
     margin: 0;
 }
 
-.feedzy-tos-template .rss_header h2 a {
-    color: var(--tos-purple) !important;
+.feedzy-custom-template .rss_header h2 a {
+    color: var(--custom-purple) !important;
     font-size: 28px;
     font-weight: 700;
     text-decoration: none;
 }
 
-.feedzy-tos-template .rss_header h2 span {
+.feedzy-custom-template .rss_header h2 span {
     display: block;
-    color: var(--tos-purple);
+    color: var(--custom-purple);
     letter-spacing: 2px;
     font-size: 14px;
 }
 
 /* Grid */
-.feedzy-tos-template ul.feedzy-default {
+.feedzy-custom-template ul.feedzy-default {
     display: grid !important;
     grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
     gap: 24px !important;
@@ -60,16 +60,16 @@
 }
 
 /* Remove old Feedzy clearfix elements */
-.feedzy-tos-template ul.feedzy-default::before,
-.feedzy-tos-template ul.feedzy-default::after {
+.feedzy-custom-template ul.feedzy-default::before,
+.feedzy-custom-template ul.feedzy-default::after {
     display: none !important;
     content: none !important;
 }
 
 /* Cards */
-.feedzy-tos-template ul.feedzy-default > li,
-.feedzy-tos-template ul.feedzy-default > li.rss_item,
-.feedzy-tos-template ul.feedzy-default > li[class*="feedzy-rss-col"] {
+.feedzy-custom-template ul.feedzy-default > li,
+.feedzy-custom-template ul.feedzy-default > li.rss_item,
+.feedzy-custom-template ul.feedzy-default > li[class*="feedzy-rss-col"] {
 
     width: auto !important;
     min-width: 0 !important;
@@ -85,8 +85,8 @@
     /* CRITICAL */
     padding: 0 !important;
 
-    border: 1px solid var(--tos-border);
-    border-top: 4px solid var(--tos-blue);
+    border: 1px solid var(--custom-border);
+    border-top: 4px solid var(--custom-blue);
 
     background: #fff;
 
@@ -96,7 +96,7 @@
 }
 
 /* Image */
-.feedzy-tos-template .rss_image {
+.feedzy-custom-template .rss_image {
 
     float: none !important;
 
@@ -109,7 +109,7 @@
     overflow: hidden;
 }
 
-.feedzy-tos-template .rss_image a {
+.feedzy-custom-template .rss_image a {
     display: block;
     width: 100%;
     height: 100%;
@@ -117,7 +117,7 @@
     padding: 0;
 }
 
-.feedzy-tos-template .rss_image img {
+.feedzy-custom-template .rss_image img {
 
     display: block;
 
@@ -132,13 +132,13 @@
 }
 
 /* Title */
-.feedzy-tos-template .title {
+.feedzy-custom-template .title {
     display: block;
     padding: 16px 16px 0 16px;
 }
 
-.feedzy-tos-template .title a {
-    color: var(--tos-purple) !important;
+.feedzy-custom-template .title a {
+    color: var(--custom-purple) !important;
 
     font-size: 20px;
     font-weight: 700;
@@ -147,12 +147,12 @@
     text-decoration: none;
 }
 
-.feedzy-tos-template .title a:hover {
+.feedzy-custom-template .title a:hover {
     text-decoration: underline;
 }
 
 /* Content */
-.feedzy-tos-template .rss_content {
+.feedzy-custom-template .rss_content {
 
     width: 100% !important;
 
@@ -162,37 +162,37 @@
 
     padding: 0 16px 16px 16px !important;
 
-    color: var(--tos-text);
+    color: var(--custom-text);
 
     font-size: 14px;
     line-height: 1.6;
 }
 
-.feedzy-tos-template .rss_content small {
+.feedzy-custom-template .rss_content small {
     display: block;
     margin-top: 8px;
 }
 
-.feedzy-tos-template .rss_content p {
+.feedzy-custom-template .rss_content p {
     margin-top: 12px;
 }
 
 /* Tablet */
 @media (max-width: 1200px) {
-    .feedzy-tos-template ul.feedzy-default {
+    .feedzy-custom-template ul.feedzy-default {
         grid-template-columns: repeat(2, 1fr) !important;
     }
 }
 
 /* Mobile */
 @media (max-width: 768px) {
-    .feedzy-tos-template ul.feedzy-default {
+    .feedzy-custom-template ul.feedzy-default {
         grid-template-columns: 1fr !important;
     }
 }
 </style>
 
-<div class="feedzy-tos-template">
+<div class="feedzy-custom-template">
   <div class="<?php echo esc_attr( feedzy_feed_class() ); ?>">
     <?php if ( $feed_title['use_title'] ) { ?>
     <div class="rss_header">
